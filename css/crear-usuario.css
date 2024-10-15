@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+#box-form {
+    width: 505px;
+    border: 1px solid #000;
+    background-color: #aecef7;
+}
+
+#tittle-form {
+    background-color: #dbe5f1;
+    padding: 15px 10px;
+    border-bottom: 1px solid #000;
+}
+
+#tittle-form h1 {
+    font-family: 'Cambria', 'Lucida Sans';
+    font-size: 19px;
+    font-weight: 500;
+    color: #017bd2;
+    margin: 0;
+    text-align: left;
+}
+
+.box-usuario {
+    padding: 16px 10px;
+    background-color: #ffffff;
+}
+
+.form-group {
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    margin-bottom: 15px;
+}
+
+.style-label-usuario, .style-label {
+    font-family: 'Cambria', 'Lucida Sans';
+    width: 140px;
+    font-size: 14px;
+}
+
+
+.style-nacimiento{
+    font-family: 'Cambria', 'Lucida Sans';
+    width: 140px;
+    font-size: 14px;
+    
+}
+
+/* revisar */
+
+.custom-select #dia, #mes, #anio {
+    font-family: 'Cambria', 'Lucida Sans';
+    width: 83px;
+    text-align: center;
+    padding: 20px 2px;
+    background-color: #fff;
+    display: flex;   
+}
+
+/*estilo dia,mes,año*/
+
+.nacimiento-group .input-label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Cambria', 'Lucida Sans';
+    font-style: italic;
+    font-size: 14px;
+    color: #000;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+}
+
+/*flechas en pais y educacion*/
+
+.custom-select::after {
+    content: '▼';
+    font-size: 16px;
+    color: #000;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Flecha nacimiento*/
+
+.nacimiento-select::after {
+    content: '▼';
+    font-size: 16px;
+    color: #000;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    transform: translateY(0);
+}
+
+select[type="date"], #pais {
+    margin-left: 105px;
+    width: 250px;
+    padding-left: 8px;
+    font-family: 'Cambria', 'Lucida Sans';
+}
+
+select[type="date"], #nivel-educat {
+    margin-left: 44px;
+    width: 251px;
+    padding-left: 8px;
+    font-family: 'Cambria', 'Lucida Sans';
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #ffffff;
+    border: 1px solid #000;
+    padding-right: 5px;
+    font-size: 15px;
+    color: #000000;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.box-terminos {
+    margin: 0px;
+    margin-left: 155px;
+    padding-bottom: 25px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 250px;
+    padding-right: 18px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+#ver-password {
+    font-family: 'Cambria', 'Lucida Sans';
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    color: #0585db;
+    text-decoration: underline;
+    position: right;
+    right: 0;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+input[type="submit"] {
+    width: 80px;
+    margin-left: 140px;
+    padding: 1px;
+    background-color: #dbe5f1;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-family: 'Cambria', 'Lucida Sans';
+}
+
+input[type="submit"]:hover {
+    background-color: #dbe5f1;
+}
+
+.container-boton{
+    font-family: 'Cambria', 'Lucida Sans';
+    display: flex;
+    align-items: center;
+    color:red;
+}
+
+.boton {
+    width: 80px;
+    margin-left: 100px;
+    padding: 0px;
+    background-color: #dbe5f1;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+#mensaje {    
+    display:none;
+    color: red;
+    font-size: 15px;
+    margin: 10px 0 5px;
+    padding-left: 15px;
+}
+
+.links {
+    text-align: center;
+    margin: 10px 15px;
+    padding-left: 30px;
+}
+
+.links a {
+    font-family: 'Cambria', 'Lucida Sans';
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    color: #0585db;
+    text-decoration: underline;
+}

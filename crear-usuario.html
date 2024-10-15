@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="icon"  type="image/x-icon" href="img/icon-Web.ico">
+    <link rel="stylesheet" href="css/crear-usuario.css">
+    <title>Alta de Usuario</title>
+</head>
+<body>
+    <div id="box-form">
+        <div id="tittle-form">
+            <h1>ALTA DE USUARIO</h1>
+        </div>
+
+        <div class="box-usuario">
+            <form id="userForm" action="/login" method="POST">
+                <div class="form-group">
+                    <label class="style-label-usuario" for="nombre">Nombre*</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="style-label-usuario" for="apellido">Apellido*</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="style-label-usuario" for="nameUsuario">Nombre de Usuario*</label>
+                    <input type="text" id="nameUsuario" name="nameUsuario" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="style-label" for="password">Contraseña*</label>
+                    <div class="input-container">
+                        <input type="password" id="password" name="password" required/>
+                        <a href="javascript:mostrarClave()" id="ver-password">Ver Contraseña</a>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="custom-select">
+                        <label class="style-label-usuario" for="pais">País*</label>
+                        <select name="pais" id="pais" required>
+                            <option value="">Seleccionar país</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="México">México</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Estados Unidos">Uruguay</option>
+                            <option value="España">Paraguay</option>
+                            <option value="Brasil">Ecuador</option>
+                        </select>
+                    </div>
+                </div><br>
+
+                <div class="form-group nacimiento-group">
+                    <label class="style-nacimiento" for="fecha-nac">Fecha de nacimiento*</label>
+                
+                    <div class="input-container">
+                        <label class="input-label" for="dia">Día</label>
+                        <div class="custom-select nacimiento-select">
+                            <select id="dia" name="dia" required>
+                                <option value=""></option>
+                                <script>
+                                    for (let i = 1; i <= 31; i++) {
+                                        document.write(`<option value="${i}">${i}</option>`);
+                                    }
+                                </script>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="input-container">
+                        <label class="input-label" for="mes">Mes</label>
+                        <div class="custom-select nacimiento-select">
+                            <select id="mes" name="mes" required>
+                                <option value=""></option>
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="input-container">
+                        <label class="input-label" for="anio">Año</label>
+                        <div class="custom-select nacimiento-select">
+                            <select id="anio" name="anio" required>
+                                <option value=""></option>
+                                <script>
+                                    const year = new Date().getFullYear();
+                                    for (let i = year; i >= year - 100; i--) {
+                                        document.write(`<option value="${i}">${i}</option>`);
+                                    }
+                                </script>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <div class="select-checkbox-container">
+                        <div class="custom-select">
+                            <label class="style-label-usuario" for="nivel-educat">Nivel educativo</label>
+                            <select name="nivel-educat" id="nivel-educat" required>
+                                <option value="">Seleccione nivel educativo</option>
+                                <option value="ninguno">Ninguno</option>
+                                <option value="primaria">Primario</option>
+                                <option value="secundaria">Secundario</option>
+                                <option value="terciario">Terciario</option>
+                                <option value="universidad">Universidad</option>
+                            </select>
+                        </div>
+                        
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="completo" name="completo">
+                            <label for="completo" class="style-label-usuario">Completo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="style-label-usuario" for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa">
+                </div>
+
+                <div class="form-group">
+                    <label class="style-label-usuario" for="cargo">Cargo</label>
+                    <input type="text" id="cargo" name="cargo">
+                </div>
+
+                <div class="box-terminos">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos" class="style-label-usuario">Acepto términos y condiciones*</label>
+                </div>
+
+                <div class="container-boton">
+                    <input class="boton" type="submit" value="Grabar" onclick="ingresar(event)" />
+                    <label id="mensaje"></label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/crear-usuario.js"></script>
+</body>
+</html>
